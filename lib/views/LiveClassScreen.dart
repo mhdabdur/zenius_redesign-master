@@ -16,7 +16,7 @@ class LiveScreenScreen extends StatefulWidget {
 class _LiveScreenScreenState extends State<LiveScreenScreen> {
   List<ClassModel> listClass = [
     ClassModel(
-        header: "PERSIAPAN SOAL UJIAN",
+        header: "LATIHAN SOAL UJIAN",
         title: "PERSIAPAN UTBK IPS",
         teacher: "Hilman",
         meetingModel: "IPS",
@@ -45,7 +45,7 @@ class _LiveScreenScreenState extends State<LiveScreenScreen> {
         teacher: "Yoki",
         meetingModel: "Kimia",
         date: "29 Mar",
-        fulldate: "29-03-2021",
+        fulldate: "29 03 2021",
         clock: "03:00 PM",
         heldFor: "30 Menit",
         imgUrl: "center_section_2.jpg",
@@ -208,7 +208,7 @@ class _LiveScreenScreenState extends State<LiveScreenScreen> {
                                         Text(
                                           data.teacher,
                                           style: TextStyle(
-                                              fontSize: Dimension.safeBlockVertical * 2,
+                                              fontSize: Dimension.safeBlockVertical * 1.5,
                                               color: Colors.grey
                                           ),
                                         ),
@@ -217,7 +217,7 @@ class _LiveScreenScreenState extends State<LiveScreenScreen> {
                                         ),
                                         Icon(
                                             FontAwesomeIcons.solidCircle,
-                                            size: Dimension.safeBlockVertical * 0.8,
+                                            size: Dimension.safeBlockVertical * 0.5,
                                             color: Colors.grey),
                                         SizedBox(
                                           width: Dimension.safeBlockVertical,
@@ -225,7 +225,7 @@ class _LiveScreenScreenState extends State<LiveScreenScreen> {
                                         Text(
                                           data.meetingModel,
                                           style: TextStyle(
-                                              fontSize: Dimension.safeBlockVertical * 2,
+                                              fontSize: Dimension.safeBlockVertical * 1.5,
                                               color: Colors.grey
                                           ),
                                         ),
@@ -243,7 +243,8 @@ class _LiveScreenScreenState extends State<LiveScreenScreen> {
                                             Text(
                                               data.date,
                                               style: TextStyle(
-                                                  fontSize: Dimension.safeBlockVertical * 2,
+                                                  fontWeight: FontWeight.w700,
+                                                  fontSize: Dimension.safeBlockVertical * 1.5,
                                                   color: ColorBase.purple
                                               ),
                                             ),
@@ -252,7 +253,7 @@ class _LiveScreenScreenState extends State<LiveScreenScreen> {
                                             ),
                                             Icon(
                                                 FontAwesomeIcons.solidCircle,
-                                                size: Dimension.safeBlockVertical,
+                                                size: Dimension.safeBlockVertical * 0.5,
                                                 color: ColorBase.purple),
                                             SizedBox(
                                               width: Dimension.safeBlockVertical,
@@ -260,7 +261,8 @@ class _LiveScreenScreenState extends State<LiveScreenScreen> {
                                             Text(
                                               data.clock,
                                               style: TextStyle(
-                                                  fontSize: Dimension.safeBlockVertical * 2,
+                                                  fontWeight: FontWeight.w700,
+                                                  fontSize: Dimension.safeBlockVertical * 1.5,
                                                   color: ColorBase.purple
                                               ),
                                             ),
@@ -269,15 +271,16 @@ class _LiveScreenScreenState extends State<LiveScreenScreen> {
                                             ),
                                             Icon(
                                                 FontAwesomeIcons.solidCircle,
-                                                size: Dimension.safeBlockVertical,
+                                                size: Dimension.safeBlockVertical * 0.5,
                                                 color: ColorBase.purple),
                                             SizedBox(
-                                              width: Dimension.safeBlockVertical * 2,
+                                              width: Dimension.safeBlockVertical,
                                             ),
                                             Text(
                                               data.heldFor,
                                               style: TextStyle(
-                                                  fontSize: Dimension.safeBlockVertical * 2,
+                                                  fontWeight: FontWeight.w700,
+                                                  fontSize: Dimension.safeBlockVertical * 1.5,
                                                   color: ColorBase.purple
                                               ),
                                             ),

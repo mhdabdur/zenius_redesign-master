@@ -6,7 +6,9 @@ import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:zenius_redesign/constants/Colors.dart';
 import 'package:zenius_redesign/constants/Environments.dart';
 import 'package:zenius_redesign/constants/Navigation.dart';
+import 'package:zenius_redesign/models/ClassModel.dart';
 import 'package:zenius_redesign/utils/Dimension.dart';
+import 'package:zenius_redesign/views/DetailSubjectScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -47,11 +49,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       borderRadius: new BorderRadius.circular(8)),
                   child: Row(
                     children: [
-                      Text("Kelas 11 - IPA", style: TextStyle(
+                      Text("Kelas 11 - IPA",
+                          style: TextStyle(
                               fontSize: Dimension.safeBlockVertical * 1.5,
                               color: ColorBase.orange,
-                              fontWeight: FontWeight.w800)
-                      ),
+                              fontWeight: FontWeight.w800)),
                       SizedBox(
                         width: Dimension.safeBlockHorizontal,
                       ),
@@ -92,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 right: Dimension.safeBlockVertical * 2),
             child: Column(
               children: [
-                banner(),
+                BannerCorosel(),
                 SizedBox(
                   height: Dimension.safeBlockVertical * 2,
                 ),
@@ -149,38 +151,49 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Flexible(
                       flex: 1,
-                      child: CircularPercentIndicator(
-                        radius: MediaQuery.of(context).size.width * 0.2,
-                        lineWidth: 2.0,
-                        animation: true,
-                        percent: 0.25,
-                        center: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              "${Environments.imageAssets}book.jpg",
-                            ),
-                            Text(
-                              "25%",
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  DetailSubjectScreen(
+                                    data: ClassModel(title: "Matematika Wajib"),
+                                    progeres: 0.25,
+                                  )));
+                        },
+                        child: CircularPercentIndicator(
+                          radius: MediaQuery.of(context).size.width * 0.2,
+                          lineWidth: 2.0,
+                          animation: true,
+                          percent: 0.25,
+                          center: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                "${Environments.imageAssets}book.jpg",
+                              ),
+                              Text(
+                                "25%",
+                                style: TextStyle(
+                                    fontSize: Dimension.safeBlockVertical * 1.5,
+                                    color: ColorBase.purple,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                          footer: Padding(
+                            padding: const EdgeInsets.only(top: 10),
+                            child: Text(
+                              "Matematika Wajib",
                               style: TextStyle(
                                   fontSize: Dimension.safeBlockVertical * 1.5,
-                                  color: ColorBase.purple,
+                                  color: ColorBase.black,
                                   fontWeight: FontWeight.bold),
+                              textAlign: TextAlign.center,
                             ),
-                          ],
-                        ),
-                        footer: Padding(
-                          padding: const EdgeInsets.only(top: 10),
-                          child: Text(
-                            "Matematika Wajib",
-                            style: TextStyle(
-                                fontSize: Dimension.safeBlockVertical * 1.5,
-                                color: ColorBase.black,
-                                fontWeight: FontWeight.bold), textAlign: TextAlign.center,
                           ),
+                          circularStrokeCap: CircularStrokeCap.round,
+                          progressColor: Colors.purple,
                         ),
-                        circularStrokeCap: CircularStrokeCap.round,
-                        progressColor: Colors.purple,
                       ),
                     ),
                     Flexible(
@@ -212,7 +225,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
                                 color: ColorBase.black,
-                                fontWeight: FontWeight.bold),textAlign: TextAlign.center,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                         circularStrokeCap: CircularStrokeCap.round,
@@ -248,7 +262,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
                                 color: ColorBase.black,
-                                fontWeight: FontWeight.bold), textAlign: TextAlign.center,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                         circularStrokeCap: CircularStrokeCap.round,
@@ -284,7 +299,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
                                 color: ColorBase.black,
-                                fontWeight: FontWeight.bold), textAlign: TextAlign.center,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                         circularStrokeCap: CircularStrokeCap.round,
@@ -329,7 +345,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
                                 color: ColorBase.black,
-                                fontWeight: FontWeight.bold), textAlign: TextAlign.center,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                         circularStrokeCap: CircularStrokeCap.round,
@@ -365,7 +382,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
                                 color: ColorBase.black,
-                                fontWeight: FontWeight.bold),textAlign: TextAlign.center,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                         circularStrokeCap: CircularStrokeCap.round,
@@ -401,7 +419,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
                                 color: ColorBase.black,
-                                fontWeight: FontWeight.bold), textAlign: TextAlign.center,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                         circularStrokeCap: CircularStrokeCap.round,
@@ -437,7 +456,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
                                 color: ColorBase.black,
-                                fontWeight: FontWeight.bold), textAlign: TextAlign.center,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                         circularStrokeCap: CircularStrokeCap.round,
@@ -482,7 +502,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
                                 color: ColorBase.black,
-                                fontWeight: FontWeight.bold), textAlign: TextAlign.center,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                         circularStrokeCap: CircularStrokeCap.round,
@@ -518,7 +539,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
                                 color: ColorBase.black,
-                                fontWeight: FontWeight.bold),textAlign: TextAlign.center,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                         circularStrokeCap: CircularStrokeCap.round,
@@ -554,7 +576,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
                                 color: ColorBase.black,
-                                fontWeight: FontWeight.bold), textAlign: TextAlign.center,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                         circularStrokeCap: CircularStrokeCap.round,
@@ -590,7 +613,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
                                 color: ColorBase.black,
-                                fontWeight: FontWeight.bold), textAlign: TextAlign.center,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
                           ),
                         ),
                         circularStrokeCap: CircularStrokeCap.round,
@@ -626,7 +650,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: Dimension.safeBlockVertical * 2,
-                          fontWeight: FontWeight.w500),
+                          fontWeight: FontWeight.w800),
                     ),
                     Text(
                       "Selengkapnya",
@@ -753,7 +777,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: Dimension.safeBlockVertical * 2,
-                      fontWeight: FontWeight.w500),
+                      fontWeight: FontWeight.w800),
                 ),
                 SizedBox(
                   height: Dimension.safeBlockVertical * 2,
@@ -854,7 +878,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontWeight: FontWeight.w300),
                 ),
                 SizedBox(
-                  height: Dimension.safeBlockVertical * 2,
+                  height: Dimension.safeBlockVertical * 3,
                 ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -873,8 +897,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Text(
                             "60",
                             style: TextStyle(
-                                fontSize: Dimension.safeBlockVertical * 1.5,
-                                fontWeight: FontWeight.w500),
+                                fontSize: Dimension.safeBlockVertical * 1.3,
+                                fontWeight: FontWeight.w800),
                           ),
                         ),
                       ),
@@ -941,8 +965,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Text(
                             "30",
                             style: TextStyle(
-                                fontSize: Dimension.safeBlockVertical * 1.5,
-                                fontWeight: FontWeight.w500),
+                                fontSize: Dimension.safeBlockVertical * 1.3,
+                                fontWeight: FontWeight.w800),
                           ),
                         ),
                       ),
@@ -1013,7 +1037,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: Dimension.safeBlockVertical * 2,
-                      fontWeight: FontWeight.w500),
+                      fontWeight: FontWeight.w800),
                 ),
                 SizedBox(
                   height: Dimension.safeBlockVertical * 1.5,
@@ -1047,7 +1071,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: Dimension.safeBlockVertical * 2,
-                      fontWeight: FontWeight.w500),
+                      fontWeight: FontWeight.w800),
                 ),
                 SizedBox(
                   height: Dimension.safeBlockVertical * 1.5,
@@ -1081,10 +1105,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: Dimension.safeBlockVertical * 2,
-                      fontWeight: FontWeight.w500),
-                ),
-                SizedBox(
-                  height: Dimension.safeBlockVertical * 1.5,
+                      fontWeight: FontWeight.w800),
                 ),
                 Container(
                   height: Dimension.safeBlockVertical * 27,
@@ -1095,6 +1116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     itemBuilder: (context, index) {
                       return Container(
                           margin: EdgeInsets.only(
+                              top: Dimension.safeBlockVertical * 4,
                               right: Dimension.safeBlockVertical * 2),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1109,7 +1131,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 "Kelas 5 Menit",
                                 style: TextStyle(
                                     fontSize: Dimension.safeBlockVertical * 2,
-                                    fontWeight: FontWeight.w500),
+                                    fontWeight: FontWeight.w700),
                               ),
                               Text(
                                 index == 0
@@ -1132,7 +1154,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: Dimension.safeBlockVertical * 2,
-                      fontWeight: FontWeight.w500),
+                      fontWeight: FontWeight.w800),
                 ),
                 SizedBox(
                   height: Dimension.safeBlockVertical * 1.5,
@@ -1146,7 +1168,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: Dimension.safeBlockVertical * 2,
-                      fontWeight: FontWeight.w500),
+                      fontWeight: FontWeight.w800),
                 ),
                 SizedBox(
                   height: Dimension.safeBlockVertical * 1.5,
@@ -1251,34 +1273,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  CarouselSlider banner() {
-    final List<String> imgSlider = [
-      "${Environments.imageAssets}Ads.jpg",
-      "${Environments.imageAssets}IMG_3119.jpg",
-      "${Environments.imageAssets}IMG_3118.jpg"
-    ];
-    return CarouselSlider(
-      items: imgSlider.map((fileimage) {
-        return Container(
-            width: Dimension.screenWidth,
-            child: GestureDetector(
-              child: Image.asset(
-                fileimage,
-                fit: BoxFit.fill,
-                width: Dimension.screenWidth * 0.8,
-              ),
-            ));
-      }).toList(),
-      options: CarouselOptions(
-          height: Dimension.safeBlockVertical * 25,
-          aspectRatio: ((Dimension.safeBlockVertical) * 0.7) /
-              (Dimension.safeBlockHorizontal),
-          viewportFraction: 1.0,
-          autoPlay: true,
-          enableInfiniteScroll: true),
-    );
-
-  }
 
   Widget searchField() {
     return TextField(
@@ -1302,6 +1296,80 @@ class _HomeScreenState extends State<HomeScreen> {
             borderRadius: BorderRadius.all(Radius.circular(9.0)),
           ),
           suffixIcon: Icon(Icons.search)),
+    );
+  }
+}
+
+class BannerCorosel extends StatefulWidget {
+  @override
+  _BannerCoroselState createState() => _BannerCoroselState();
+}
+
+class _BannerCoroselState extends State<BannerCorosel> {
+  final List<String> imgSlider = [
+    "${Environments.imageAssets}Ads.jpg",
+    "${Environments.imageAssets}IMG_3119.jpg",
+    "${Environments.imageAssets}IMG_3118.jpg"
+  ];
+
+  int _index = 0;
+
+  CarouselController buttonCarouselController = CarouselController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        CarouselSlider(
+          items: imgSlider.map((fileimage) {
+            return Container(
+                width: Dimension.screenWidth,
+                child: GestureDetector(
+                  child: Image.asset(
+                    fileimage,
+                    fit: BoxFit.fill,
+                    width: Dimension.screenWidth * 0.8,
+                  ),
+                ));
+          }).toList(),
+          carouselController: buttonCarouselController,
+          options: CarouselOptions(
+              height: Dimension.safeBlockVertical * 25,
+              aspectRatio: ((Dimension.safeBlockVertical) * 0.7) /
+                  (Dimension.safeBlockHorizontal),
+              viewportFraction: 1.0,
+              autoPlay: true,
+              enableInfiniteScroll: true,
+              onPageChanged: (index, reason) {
+                _index = index;
+                setState(() {});
+              }),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: imgSlider.map((url) {
+            int index = imgSlider.indexOf(url);
+            return _index == index ? Container(
+              width: 30.0,
+              height: 5.0,
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color:Color.fromRGBO(253, 164, 12, 1.0),
+              ),
+            ):
+            Container(
+              width: 5.0,
+              height: 5.0,
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Color.fromRGBO(204, 204, 204, 1.0),
+              ),
+            );
+          }).toList(),
+        ),
+      ],
     );
   }
 }

@@ -9,8 +9,9 @@ import 'package:zenius_redesign/utils/Dimension.dart';
 
 class DetailSubjectScreen extends StatefulWidget {
   final ClassModel data;
+  final double progeres;
 
-  DetailSubjectScreen({this.data});
+  DetailSubjectScreen({this.data, this.progeres});
 
   @override
   _DetailSubjectScreenState createState() => _DetailSubjectScreenState();
@@ -59,7 +60,7 @@ class _DetailSubjectScreenState extends State<DetailSubjectScreen> {
                             Container(
                               width: Dimension.screenWidth * 0.5,
                               child: LinearProgressIndicator(
-                                value: 0.25,
+                                value: widget.progeres,
                                 backgroundColor: Colors.purple[200],
                                 valueColor: AlwaysStoppedAnimation(Colors.purple),
                               ),
@@ -282,48 +283,6 @@ class _DetailSubjectScreenState extends State<DetailSubjectScreen> {
                                           ),
                                           SizedBox(
                                             height: Dimension.safeBlockVertical * 2,
-                                          ),
-                                          Container(
-                                            height: Dimension.safeBlockVertical * 20,
-                                            child: ListView.builder(
-                                              scrollDirection: Axis.horizontal,
-                                              shrinkWrap: true,
-                                              itemCount: 4,
-                                              itemBuilder: (context, index) {
-                                                return Container(
-                                                    margin:
-                                                    EdgeInsets.only(right: Dimension.safeBlockVertical * 2),
-                                                    child: Card(
-                                                        shape: RoundedRectangleBorder(
-                                                            borderRadius: BorderRadius.all(Radius.circular(10))
-                                                        ),
-                                                        child: Container(
-                                                          padding: EdgeInsets.all(Dimension.safeBlockVertical * 2),
-                                                          child: Column(
-                                                            crossAxisAlignment: CrossAxisAlignment.center,
-                                                            mainAxisAlignment: MainAxisAlignment.center,
-                                                            children: [
-                                                              Icon(
-                                                                FontAwesomeIcons.chartPie,
-                                                                size: Dimension.safeBlockVertical * 10,
-                                                                color: Colors.black,),
-                                                              SizedBox(
-                                                                height: Dimension.safeBlockVertical * 2,
-                                                              ),
-                                                              Text(
-                                                                "Rumus Permutasi",
-                                                                style: TextStyle(
-                                                                    fontSize: Dimension.safeBlockVertical * 2,
-                                                                    fontWeight: FontWeight.w500
-                                                                ),
-                                                              )
-                                                            ],
-                                                          ),
-                                                        )
-                                                    )
-                                                );
-                                              },
-                                            ),
                                           ),
                                         ],
                                       ),

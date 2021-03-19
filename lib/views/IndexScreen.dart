@@ -10,6 +10,7 @@ import 'package:zenius_redesign/constants/Colors.dart';
 import 'package:zenius_redesign/constants/Dictionary.dart';
 import 'package:zenius_redesign/constants/Environments.dart';
 import 'package:zenius_redesign/constants/Navigation.dart';
+import 'package:zenius_redesign/utils/ColorUtils.dart';
 import 'package:zenius_redesign/utils/Dimension.dart';
 import 'package:zenius_redesign/views/AccountScreen.dart';
 import 'package:zenius_redesign/views/CartScreen.dart';
@@ -102,14 +103,21 @@ class _IndexState extends State<IndexScreen>{
       body: SafeArea(
         child: _buildContent(_currentIndex),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-          onTap: onTabTapped,
-          currentIndex: _currentIndex,
-          backgroundColor: Colors.white,
-          selectedFontSize: 12.0,
-          unselectedFontSize: 12.0,
-          type: BottomNavigationBarType.fixed,
-          items: items),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+        border: Border.all(
+          color: Colors.grey,
+          width: 0.3,
+        ),),
+        child: BottomNavigationBar(
+            onTap: onTabTapped,
+            currentIndex: _currentIndex,
+            backgroundColor: ColorUtils.fromHex("F7F7F7"),
+            selectedFontSize: 12.0,
+            unselectedFontSize: 12.0,
+            type: BottomNavigationBarType.fixed,
+            items: items),
+      ),
     );
   }
 
