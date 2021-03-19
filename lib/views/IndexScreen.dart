@@ -52,7 +52,7 @@ class _IndexState extends State<IndexScreen>{
 
     items = [
       BottomNavigationBarItem(
-          icon: _currentIndex == 0 ? Icon(FontAwesomeIcons.home, size: 16, color: ColorBase.purple,) : Icon(FontAwesomeIcons.home, size: 16, color: ColorBase.darkGrey,),
+          icon: _currentIndex == 0 ? Image.asset("assets/ri_home-7-fill.png") : Image.asset("assets/ri_home-7.png"),
           title: Column(
             children: <Widget>[
               SizedBox(height: 4),
@@ -60,7 +60,7 @@ class _IndexState extends State<IndexScreen>{
             ],
           )),
       BottomNavigationBarItem(
-          icon: _currentIndex == 1 ? Icon(FontAwesomeIcons.tv, size: 16, color: ColorBase.purple,) : Icon(FontAwesomeIcons.tv, size: 16, color: ColorBase.darkGrey,),
+          icon: _currentIndex == 1 ? Image.asset("assets/ri_live-fill.png") : Image.asset("assets/ri_live-line.png"),
           title: Column(
             children: <Widget>[
               SizedBox(height: 4),
@@ -68,7 +68,7 @@ class _IndexState extends State<IndexScreen>{
             ],
           )),
       BottomNavigationBarItem(
-          icon: _currentIndex == 2 ? Icon(FontAwesomeIcons.book, size: 16, color: ColorBase.purple,) : Icon(FontAwesomeIcons.book, size: 16, color: ColorBase.darkGrey,),
+          icon: _currentIndex == 2 ? Image.asset("assets/zmdi_collection-bookmark-fill.png") : Image.asset("assets/zmdi_collection-bookmark.png"),
           title: Column(
             children: <Widget>[
               SizedBox(height: 4),
@@ -76,7 +76,7 @@ class _IndexState extends State<IndexScreen>{
             ],
           )),
       BottomNavigationBarItem(
-          icon: _currentIndex == 3 ? Icon(FontAwesomeIcons.shoppingCart, size: 16, color: ColorBase.purple,) : Icon(FontAwesomeIcons.shoppingCart, size: 16, color: ColorBase.darkGrey,),
+          icon: _currentIndex == 3 ? Image.asset("assets/ps_shopping-cart-fill.png") : Image.asset("assets/ps_shopping-cart.png"),
           title: Column(
             children: <Widget>[
               SizedBox(height: 4),
@@ -84,7 +84,7 @@ class _IndexState extends State<IndexScreen>{
             ],
           )),
       BottomNavigationBarItem(
-          icon: _currentIndex == 4 ? Icon(FontAwesomeIcons.user, size: 16, color: ColorBase.purple) : Icon(FontAwesomeIcons.solidUserCircle, size: 16, color: ColorBase.darkGrey),
+          icon: _currentIndex == 4 ? Image.asset("assets/user-line-fill.png") : Image.asset("assets/user-line.png"),
           title: Column(
             children: <Widget>[
               SizedBox(height: 4),

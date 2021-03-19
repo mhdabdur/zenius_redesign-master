@@ -145,230 +145,150 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    CircularPercentIndicator(
-                      radius: MediaQuery.of(context).size.width * 0.2,
-                      lineWidth: 2.0,
-                      animation: true,
-                      percent: 0.25,
-                      center: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "${Environments.imageAssets}book.jpg",
-                          ),
-                          Text(
-                            "25%",
-                            style: TextStyle(
-                                fontSize: Dimension.safeBlockVertical * 1.5,
-                                color: ColorBase.purple,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                      footer: Padding(
-                        padding: const EdgeInsets.only(top: 10),
-                        child: Text(
-                          "kntl",
-                          style: TextStyle(
-                              fontSize: Dimension.safeBlockVertical * 2,
-                              color: ColorBase.purple,
-                              fontWeight: FontWeight.bold),
+                    Flexible(
+                      flex: 1,
+                      child: CircularPercentIndicator(
+                        radius: MediaQuery.of(context).size.width * 0.2,
+                        lineWidth: 2.0,
+                        animation: true,
+                        percent: 0.25,
+                        center: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "${Environments.imageAssets}book.jpg",
+                            ),
+                            Text(
+                              "25%",
+                              style: TextStyle(
+                                  fontSize: Dimension.safeBlockVertical * 1.5,
+                                  color: ColorBase.purple,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
                         ),
-                      ),
-                      circularStrokeCap: CircularStrokeCap.round,
-                      progressColor: Colors.purple,
-                    ),
-                    CircularPercentIndicator(
-                      radius: MediaQuery.of(context).size.width * 0.2,
-                      lineWidth: 2.0,
-                      animation: true,
-                      percent: 0.25,
-                      center: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "${Environments.imageAssets}book.jpg",
-                          ),
-                          Text(
-                            "25%",
+                        footer: Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Matematika Wajib",
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
-                                color: ColorBase.purple,
-                                fontWeight: FontWeight.bold),
+                                color: ColorBase.black,
+                                fontWeight: FontWeight.bold), textAlign: TextAlign.center,
                           ),
-                        ],
-                      ),
-                      footer: Padding(
-                        padding: const EdgeInsets.only(top: 10),
-                        child: Text(
-                          "kntl",
-                          style: TextStyle(
-                              fontSize: Dimension.safeBlockVertical * 2,
-                              color: ColorBase.purple,
-                              fontWeight: FontWeight.bold),
                         ),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        progressColor: Colors.purple,
                       ),
-                      circularStrokeCap: CircularStrokeCap.round,
-                      progressColor: Colors.purple,
                     ),
-                    CircularPercentIndicator(
-                      radius: MediaQuery.of(context).size.width * 0.2,
-                      lineWidth: 2.0,
-                      animation: true,
-                      percent: 0.25,
-                      center: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "${Environments.imageAssets}book.jpg",
-                          ),
-                          Text(
-                            "25%",
-                            style: TextStyle(
-                                fontSize: Dimension.safeBlockVertical * 1.5,
-                                color: ColorBase.purple,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                      footer: Padding(
-                        padding: const EdgeInsets.only(top: 10),
-                        child: Text(
-                          "kntl",
-                          style: TextStyle(
-                              fontSize: Dimension.safeBlockVertical * 2,
-                              color: ColorBase.purple,
-                              fontWeight: FontWeight.bold),
+                    Flexible(
+                      flex: 1,
+                      child: CircularPercentIndicator(
+                        radius: MediaQuery.of(context).size.width * 0.2,
+                        lineWidth: 2.0,
+                        animation: true,
+                        percent: 0.35,
+                        center: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "${Environments.imageAssets}book.jpg",
+                            ),
+                            Text(
+                              "35%",
+                              style: TextStyle(
+                                  fontSize: Dimension.safeBlockVertical * 1.5,
+                                  color: ColorBase.purple,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
                         ),
-                      ),
-                      circularStrokeCap: CircularStrokeCap.round,
-                      progressColor: Colors.purple,
-                    ),
-                    CircularPercentIndicator(
-                      radius: MediaQuery.of(context).size.width * 0.2,
-                      lineWidth: 2.0,
-                      animation: true,
-                      percent: 0.25,
-                      center: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            "${Environments.imageAssets}book.jpg",
-                          ),
-                          Text(
-                            "25%",
+                        footer: Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Matematika",
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
-                                color: ColorBase.purple,
-                                fontWeight: FontWeight.bold),
+                                color: ColorBase.black,
+                                fontWeight: FontWeight.bold),textAlign: TextAlign.center,
                           ),
-                        ],
-                      ),
-                      footer: Padding(
-                        padding: const EdgeInsets.only(top: 10),
-                        child: Text(
-                          "kntl",
-                          style: TextStyle(
-                              fontSize: Dimension.safeBlockVertical * 2,
-                              color: ColorBase.purple,
-                              fontWeight: FontWeight.bold),
                         ),
-                      ),
-                      circularStrokeCap: CircularStrokeCap.round,
-                      progressColor: Colors.purple,
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: Dimension.safeBlockVertical * 2,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(Dimension.safeBlockVertical * 3),
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border:
-                              Border.all(color: ColorBase.purple, width: 1.5)),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            "${Environments.imageAssets}magnetize.jpg",
-                          ),
-                          Text(
-                            "25%",
-                            style: TextStyle(
-                                fontSize: Dimension.safeBlockVertical * 1.5,
-                                color: ColorBase.purple,
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
+                        circularStrokeCap: CircularStrokeCap.round,
+                        progressColor: Colors.purple,
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.all(Dimension.safeBlockVertical * 3),
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border:
-                              Border.all(color: ColorBase.purple, width: 1.5)),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            "${Environments.imageAssets}chemistry.jpg",
-                          ),
-                          Text(
-                            "25%",
+                    Flexible(
+                      flex: 1,
+                      child: CircularPercentIndicator(
+                        radius: MediaQuery.of(context).size.width * 0.2,
+                        lineWidth: 2.0,
+                        animation: true,
+                        percent: 0.5,
+                        center: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "${Environments.imageAssets}idn.jpg",
+                            ),
+                            Text(
+                              "50%",
+                              style: TextStyle(
+                                  fontSize: Dimension.safeBlockVertical * 1.5,
+                                  color: ColorBase.purple,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        footer: Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Bahasa Indonesia",
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
-                                color: ColorBase.purple,
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
+                                color: ColorBase.black,
+                                fontWeight: FontWeight.bold), textAlign: TextAlign.center,
+                          ),
+                        ),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        progressColor: Colors.purple,
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.all(Dimension.safeBlockVertical * 3),
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border:
-                              Border.all(color: ColorBase.purple, width: 1.5)),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            "${Environments.imageAssets}dna.jpg",
-                          ),
-                          Text(
-                            "25%",
+                    Flexible(
+                      flex: 1,
+                      child: CircularPercentIndicator(
+                        radius: MediaQuery.of(context).size.width * 0.2,
+                        lineWidth: 2.0,
+                        animation: true,
+                        percent: 0.42,
+                        center: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "${Environments.imageAssets}english.jpg",
+                            ),
+                            Text(
+                              "42%",
+                              style: TextStyle(
+                                  fontSize: Dimension.safeBlockVertical * 1.5,
+                                  color: ColorBase.purple,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        footer: Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Bahasa Inggris",
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
-                                color: ColorBase.purple,
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(Dimension.safeBlockVertical * 3),
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border:
-                              Border.all(color: ColorBase.purple, width: 1.5)),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            "${Environments.imageAssets}graphic.jpg",
+                                color: ColorBase.black,
+                                fontWeight: FontWeight.bold), textAlign: TextAlign.center,
                           ),
-                          Text(
-                            "25%",
-                            style: TextStyle(
-                                fontSize: Dimension.safeBlockVertical * 1.5,
-                                color: ColorBase.purple,
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
+                        ),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        progressColor: Colors.purple,
                       ),
                     ),
                   ],
@@ -377,91 +297,304 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: Dimension.safeBlockVertical * 2,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      padding: EdgeInsets.all(Dimension.safeBlockVertical * 3),
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border:
-                              Border.all(color: ColorBase.purple, width: 1.5)),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            "${Environments.imageAssets}world.jpg",
-                          ),
-                          Text(
-                            "25%",
+                    Flexible(
+                      flex: 1,
+                      child: CircularPercentIndicator(
+                        radius: MediaQuery.of(context).size.width * 0.2,
+                        lineWidth: 2.0,
+                        animation: true,
+                        percent: 0.25,
+                        center: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "${Environments.imageAssets}magnetize.jpg",
+                            ),
+                            Text(
+                              "25%",
+                              style: TextStyle(
+                                  fontSize: Dimension.safeBlockVertical * 1.5,
+                                  color: ColorBase.purple,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        footer: Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Fisika",
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
-                                color: ColorBase.purple,
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
+                                color: ColorBase.black,
+                                fontWeight: FontWeight.bold), textAlign: TextAlign.center,
+                          ),
+                        ),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        progressColor: Colors.purple,
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.all(Dimension.safeBlockVertical * 3),
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border:
-                              Border.all(color: ColorBase.purple, width: 1.5)),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            "${Environments.imageAssets}sosio.jpg",
-                          ),
-                          Text(
-                            "25%",
+                    Flexible(
+                      flex: 1,
+                      child: CircularPercentIndicator(
+                        radius: MediaQuery.of(context).size.width * 0.2,
+                        lineWidth: 2.0,
+                        animation: true,
+                        percent: 0.35,
+                        center: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "${Environments.imageAssets}chemistry.jpg",
+                            ),
+                            Text(
+                              "35%",
+                              style: TextStyle(
+                                  fontSize: Dimension.safeBlockVertical * 1.5,
+                                  color: ColorBase.purple,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        footer: Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Kimia",
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
-                                color: ColorBase.purple,
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
+                                color: ColorBase.black,
+                                fontWeight: FontWeight.bold),textAlign: TextAlign.center,
+                          ),
+                        ),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        progressColor: Colors.purple,
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.all(Dimension.safeBlockVertical * 3),
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border:
-                              Border.all(color: ColorBase.purple, width: 1.5)),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            "${Environments.imageAssets}history.jpg",
-                          ),
-                          Text(
-                            "25%",
+                    Flexible(
+                      flex: 1,
+                      child: CircularPercentIndicator(
+                        radius: MediaQuery.of(context).size.width * 0.2,
+                        lineWidth: 2.0,
+                        animation: true,
+                        percent: 0.5,
+                        center: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "${Environments.imageAssets}dna.jpg",
+                            ),
+                            Text(
+                              "50%",
+                              style: TextStyle(
+                                  fontSize: Dimension.safeBlockVertical * 1.5,
+                                  color: ColorBase.purple,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        footer: Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Biologi",
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
-                                color: ColorBase.purple,
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
+                                color: ColorBase.black,
+                                fontWeight: FontWeight.bold), textAlign: TextAlign.center,
+                          ),
+                        ),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        progressColor: Colors.purple,
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.all(Dimension.safeBlockVertical * 3),
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border:
-                              Border.all(color: ColorBase.purple, width: 1.5)),
-                      child: Column(
-                        children: [
-                          Image.asset(
-                            "${Environments.imageAssets}backup.jpg",
-                          ),
-                          Text(
-                            "25%",
+                    Flexible(
+                      flex: 1,
+                      child: CircularPercentIndicator(
+                        radius: MediaQuery.of(context).size.width * 0.2,
+                        lineWidth: 2.0,
+                        animation: true,
+                        percent: 0.42,
+                        center: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "${Environments.imageAssets}graphic.jpg",
+                            ),
+                            Text(
+                              "42%",
+                              style: TextStyle(
+                                  fontSize: Dimension.safeBlockVertical * 1.5,
+                                  color: ColorBase.purple,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        footer: Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Ekonomi",
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
-                                color: ColorBase.purple,
-                                fontWeight: FontWeight.bold),
-                          )
-                        ],
+                                color: ColorBase.black,
+                                fontWeight: FontWeight.bold), textAlign: TextAlign.center,
+                          ),
+                        ),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        progressColor: Colors.purple,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: Dimension.safeBlockVertical * 2,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Flexible(
+                      flex: 1,
+                      child: CircularPercentIndicator(
+                        radius: MediaQuery.of(context).size.width * 0.2,
+                        lineWidth: 2.0,
+                        animation: true,
+                        percent: 0.25,
+                        center: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "${Environments.imageAssets}world.jpg",
+                            ),
+                            Text(
+                              "25%",
+                              style: TextStyle(
+                                  fontSize: Dimension.safeBlockVertical * 1.5,
+                                  color: ColorBase.purple,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        footer: Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Geografi",
+                            style: TextStyle(
+                                fontSize: Dimension.safeBlockVertical * 1.5,
+                                color: ColorBase.black,
+                                fontWeight: FontWeight.bold), textAlign: TextAlign.center,
+                          ),
+                        ),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        progressColor: Colors.purple,
+                      ),
+                    ),
+                    Flexible(
+                      flex: 1,
+                      child: CircularPercentIndicator(
+                        radius: MediaQuery.of(context).size.width * 0.2,
+                        lineWidth: 2.0,
+                        animation: true,
+                        percent: 0.35,
+                        center: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "${Environments.imageAssets}sosio.jpg",
+                            ),
+                            Text(
+                              "35%",
+                              style: TextStyle(
+                                  fontSize: Dimension.safeBlockVertical * 1.5,
+                                  color: ColorBase.purple,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        footer: Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Sosiologi",
+                            style: TextStyle(
+                                fontSize: Dimension.safeBlockVertical * 1.5,
+                                color: ColorBase.black,
+                                fontWeight: FontWeight.bold),textAlign: TextAlign.center,
+                          ),
+                        ),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        progressColor: Colors.purple,
+                      ),
+                    ),
+                    Flexible(
+                      flex: 1,
+                      child: CircularPercentIndicator(
+                        radius: MediaQuery.of(context).size.width * 0.2,
+                        lineWidth: 2.0,
+                        animation: true,
+                        percent: 0.5,
+                        center: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "${Environments.imageAssets}history.jpg",
+                            ),
+                            Text(
+                              "50%",
+                              style: TextStyle(
+                                  fontSize: Dimension.safeBlockVertical * 1.5,
+                                  color: ColorBase.purple,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        footer: Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Sejarah Indonesia",
+                            style: TextStyle(
+                                fontSize: Dimension.safeBlockVertical * 1.5,
+                                color: ColorBase.black,
+                                fontWeight: FontWeight.bold), textAlign: TextAlign.center,
+                          ),
+                        ),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        progressColor: Colors.purple,
+                      ),
+                    ),
+                    Flexible(
+                      flex: 1,
+                      child: CircularPercentIndicator(
+                        radius: MediaQuery.of(context).size.width * 0.2,
+                        lineWidth: 2.0,
+                        animation: true,
+                        percent: 0.42,
+                        center: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              "${Environments.imageAssets}backup.jpg",
+                            ),
+                            Text(
+                              "42%",
+                              style: TextStyle(
+                                  fontSize: Dimension.safeBlockVertical * 1.5,
+                                  color: ColorBase.purple,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        footer: Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Text(
+                            "Sejarah Peminatan",
+                            style: TextStyle(
+                                fontSize: Dimension.safeBlockVertical * 1.5,
+                                color: ColorBase.black,
+                                fontWeight: FontWeight.bold), textAlign: TextAlign.center,
+                          ),
+                        ),
+                        circularStrokeCap: CircularStrokeCap.round,
+                        progressColor: Colors.purple,
                       ),
                     ),
                   ],
