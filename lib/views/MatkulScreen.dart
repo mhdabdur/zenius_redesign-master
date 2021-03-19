@@ -42,8 +42,7 @@ class MatkulScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Text(
               title,
-              style:
-                  GoogleFonts.roboto(fontWeight: FontWeight.w500, fontSize: 24),
+              style: GoogleFonts.roboto(fontWeight: FontWeight.w500, fontSize: 24),
               maxLines: 1,
               overflow: TextOverflow.fade,
             ),

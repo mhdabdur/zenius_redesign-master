@@ -84,7 +84,7 @@ class _LiveScreenScreenState extends State<LiveScreenScreen> {
           appBar: AppBar(
               brightness: Brightness.light,
               backgroundColor: ColorBase.purple,
-              toolbarHeight: Dimension.safeBlockVertical * 18.5,
+              toolbarHeight: Dimension.safeBlockVertical * 20,
               centerTitle: false,
               title: Text(
                 "Live Classes",
@@ -96,8 +96,7 @@ class _LiveScreenScreenState extends State<LiveScreenScreen> {
               actions: [
                 GestureDetector(
                     onTap: () {
-                      Navigator.of(context)
-                          .pushNamed(NavigationConstant.Filter);
+                      Navigator.of(context).pushNamed(NavigationConstant.Filter);
                     },
                     child: Container(
                       margin: EdgeInsets.only(
@@ -108,8 +107,8 @@ class _LiveScreenScreenState extends State<LiveScreenScreen> {
                       padding: EdgeInsets.only(
                           bottom: Dimension.safeBlockVertical,
                           top: Dimension.safeBlockVertical,
-                          left: Dimension.safeBlockVertical * 2,
-                          right: Dimension.safeBlockVertical * 2),
+                          left: Dimension.safeBlockVertical * 3,
+                          right: Dimension.safeBlockVertical * 3),
                       decoration: BoxDecoration(
                           color: ColorBase.darkerPurple,
                           borderRadius: new BorderRadius.circular(8)
@@ -119,12 +118,12 @@ class _LiveScreenScreenState extends State<LiveScreenScreen> {
                           Text(
                               "Kelas 11 - IPA",
                               style: TextStyle(
-                                  fontSize: Dimension.safeBlockVertical * 2,
+                                  fontSize: Dimension.safeBlockVertical * 1.5,
                                   color: ColorBase.orange,
-                                  fontWeight: FontWeight.w500
+                                  fontWeight: FontWeight.w800
                               )),
                           SizedBox(width: Dimension.safeBlockHorizontal,),
-                          Icon(FontAwesomeIcons.caretDown, size: Dimension.safeBlockVertical * 2.5, color: ColorBase.orange)
+                          Icon(FontAwesomeIcons.caretDown, size: Dimension.safeBlockVertical * 1.5, color: ColorBase.orange)
                         ],
                       ),
                     ))
@@ -141,7 +140,7 @@ class _LiveScreenScreenState extends State<LiveScreenScreen> {
                   labelColor: Colors.white,
                   indicatorSize: TabBarIndicatorSize.tab,
                   indicator: new BubbleTabIndicator(
-                    indicatorHeight: Dimension.safeBlockVertical * 6,
+                    indicatorHeight: Dimension.safeBlockVertical * 5.5,
                     indicatorColor: Colors.orange,
                     tabBarIndicatorSize: TabBarIndicatorSize.tab,
                   ),

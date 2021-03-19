@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:zenius_redesign/configs/Routes.dart';
 import 'package:zenius_redesign/constants/Dictionary.dart';
 import 'package:zenius_redesign/constants/FontsFamily.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primaryColor: Colors.blue,
           primaryColorBrightness: Brightness.dark,
-//          fontFamily: FontsFamily.circularStd,
+          fontFamily: GoogleFonts.roboto().fontFamily,
 //          canvasColor: Colors.transparent,
           bottomSheetTheme: BottomSheetThemeData(
               backgroundColor: Colors.black.withOpacity(0)),

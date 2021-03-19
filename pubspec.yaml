@@ -66,6 +66,7 @@ dependencies:
   bubble_tab_indicator: "^0.1.4"
   percent_indicator: ^2.1.9+1
   google_fonts:
+  flutter_svg:
 
 dev_dependencies:
   flutter_test:

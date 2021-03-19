@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
           brightness: Brightness.light,
           backgroundColor: ColorBase.purple,
-          toolbarHeight: Dimension.safeBlockVertical * 16,
+          toolbarHeight: Dimension.safeBlockVertical * 18,
           centerTitle: false,
           title: Text(
             "Hi Abdur",
@@ -40,23 +40,23 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: EdgeInsets.only(
                       bottom: Dimension.safeBlockVertical,
                       top: Dimension.safeBlockVertical,
-                      left: Dimension.safeBlockVertical * 2,
-                      right: Dimension.safeBlockVertical * 2),
+                      left: Dimension.safeBlockVertical * 3,
+                      right: Dimension.safeBlockVertical * 3),
                   decoration: BoxDecoration(
                       color: ColorBase.darkerPurple,
                       borderRadius: new BorderRadius.circular(8)),
                   child: Row(
                     children: [
-                      Text("Kelas 11 - IPA",
-                          style: TextStyle(
-                              fontSize: Dimension.safeBlockVertical * 2,
+                      Text("Kelas 11 - IPA", style: TextStyle(
+                              fontSize: Dimension.safeBlockVertical * 1.5,
                               color: ColorBase.orange,
-                              fontWeight: FontWeight.w500)),
+                              fontWeight: FontWeight.w800)
+                      ),
                       SizedBox(
                         width: Dimension.safeBlockHorizontal,
                       ),
                       Icon(FontAwesomeIcons.caretDown,
-                          size: Dimension.safeBlockVertical * 2.5,
+                          size: Dimension.safeBlockVertical * 1.5,
                           color: ColorBase.orange)
                     ],
                   ),
@@ -138,13 +138,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: Dimension.safeBlockVertical * 2,
-                      fontWeight: FontWeight.w500),
+                      fontWeight: FontWeight.w700),
                 ),
                 SizedBox(
                   height: Dimension.safeBlockVertical * 2,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Flexible(
@@ -1257,7 +1257,6 @@ class _HomeScreenState extends State<HomeScreen> {
       "${Environments.imageAssets}IMG_3119.jpg",
       "${Environments.imageAssets}IMG_3118.jpg"
     ];
-
     return CarouselSlider(
       items: imgSlider.map((fileimage) {
         return Container(
@@ -1278,6 +1277,7 @@ class _HomeScreenState extends State<HomeScreen> {
           autoPlay: true,
           enableInfiniteScroll: true),
     );
+
   }
 
   Widget searchField() {

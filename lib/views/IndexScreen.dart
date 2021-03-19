@@ -5,6 +5,7 @@ import 'package:bottom_navigation_badge/bottom_navigation_badge.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:zenius_redesign/constants/Colors.dart';
 import 'package:zenius_redesign/constants/Dictionary.dart';
 import 'package:zenius_redesign/constants/Environments.dart';
@@ -56,7 +57,7 @@ class _IndexState extends State<IndexScreen>{
           title: Column(
             children: <Widget>[
               SizedBox(height: 4),
-              _currentIndex == 0 ? Text(Dictionary.textHome, style: TextStyle(color: ColorBase.purple)) : Text(Dictionary.textHome, style: TextStyle(color: ColorBase.darkGrey)),
+              _currentIndex == 0 ? Text(Dictionary.textHome, style: GoogleFonts.roboto(fontWeight: FontWeight.w500, color: ColorBase.purple)) : Text(Dictionary.textHome, style: GoogleFonts.roboto(fontWeight: FontWeight.w500, color: ColorBase.darkGrey)),
             ],
           )),
       BottomNavigationBarItem(
@@ -64,7 +65,7 @@ class _IndexState extends State<IndexScreen>{
           title: Column(
             children: <Widget>[
               SizedBox(height: 4),
-              _currentIndex == 1 ? Text(Dictionary.textLiveClass, style: TextStyle(color: ColorBase.purple)) : Text(Dictionary.textLiveClass, style: TextStyle(color: ColorBase.darkGrey)),
+              _currentIndex == 1 ? Text(Dictionary.textLiveClass, style: GoogleFonts.roboto(fontWeight: FontWeight.w500, color: ColorBase.purple)) : Text(Dictionary.textLiveClass, style: GoogleFonts.roboto(fontWeight: FontWeight.w500, color: ColorBase.darkGrey)),
             ],
           )),
       BottomNavigationBarItem(
@@ -72,7 +73,7 @@ class _IndexState extends State<IndexScreen>{
           title: Column(
             children: <Widget>[
               SizedBox(height: 4),
-              _currentIndex == 2 ? Text(Dictionary.textCollection, style: TextStyle(color: ColorBase.purple)) : Text(Dictionary.textCollection, style: TextStyle(color: ColorBase.darkGrey)),
+              _currentIndex == 2 ? Text(Dictionary.textCollection, style: GoogleFonts.roboto(fontWeight: FontWeight.w500, color: ColorBase.purple)) : Text(Dictionary.textCollection, style: GoogleFonts.roboto(fontWeight: FontWeight.w500, color: ColorBase.darkGrey)),
             ],
           )),
       BottomNavigationBarItem(
@@ -80,7 +81,7 @@ class _IndexState extends State<IndexScreen>{
           title: Column(
             children: <Widget>[
               SizedBox(height: 4),
-              _currentIndex == 3 ? Text(Dictionary.textCart, style: TextStyle(color: ColorBase.purple)) : Text(Dictionary.textCart, style: TextStyle(color: ColorBase.darkGrey)),
+              _currentIndex == 3 ? Text(Dictionary.textCart, style: GoogleFonts.roboto(fontWeight: FontWeight.w500, color: ColorBase.purple)) : Text(Dictionary.textCart, style: GoogleFonts.roboto(fontWeight: FontWeight.w500, color: ColorBase.darkGrey)),
             ],
           )),
       BottomNavigationBarItem(
@@ -88,7 +89,7 @@ class _IndexState extends State<IndexScreen>{
           title: Column(
             children: <Widget>[
               SizedBox(height: 4),
-              _currentIndex == 4 ? Text(Dictionary.textAccount, style: TextStyle(color: ColorBase.purple)) : Text(Dictionary.textAccount, style: TextStyle(color: ColorBase.darkGrey)),
+              _currentIndex == 4 ? Text(Dictionary.textAccount, style: GoogleFonts.roboto(fontWeight: FontWeight.w500, color: ColorBase.purple)) : Text(Dictionary.textAccount, style: GoogleFonts.roboto(fontWeight: FontWeight.w500, color: ColorBase.darkGrey)),
             ],
           )),
     ];
@@ -105,6 +106,8 @@ class _IndexState extends State<IndexScreen>{
           onTap: onTabTapped,
           currentIndex: _currentIndex,
           backgroundColor: Colors.white,
+          selectedFontSize: 12.0,
+          unselectedFontSize: 12.0,
           type: BottomNavigationBarType.fixed,
           items: items),
     );
