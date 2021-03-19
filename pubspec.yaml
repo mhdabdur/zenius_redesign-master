@@ -101,7 +101,7 @@ flutter:
   fonts:
     - family: Roboto
       fonts:
-      - asset: fonts/Roboto.ttf
+        - asset: fonts/Roboto.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
