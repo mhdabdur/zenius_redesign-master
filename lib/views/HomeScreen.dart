@@ -498,7 +498,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         footer: Padding(
                           padding: const EdgeInsets.only(top: 10),
                           child: Text(
-                            "Geografi",
+                            "Geografii",
                             style: TextStyle(
                                 fontSize: Dimension.safeBlockVertical * 1.5,
                                 color: ColorBase.black,
