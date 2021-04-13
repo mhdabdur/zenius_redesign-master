@@ -214,6 +214,8 @@ class _DetailSubjectScreenState extends State<DetailSubjectScreen> {
                                                 GestureDetector(
                                                   onTap: () {
                                                     showSheet(context);
+                                                    print(
+                                                        "lihat semua clicked");
                                                   },
                                                   child: Text(
                                                     "Lihat Semua >",
@@ -331,6 +333,8 @@ class _DetailSubjectScreenState extends State<DetailSubjectScreen> {
                                                 ),
                                                 GestureDetector(
                                                   onTap: () {
+                                                    print(
+                                                        "lihat semua clicked");
                                                     showSheet(context);
                                                   },
                                                   child: Text(
@@ -382,6 +386,8 @@ class _DetailSubjectScreenState extends State<DetailSubjectScreen> {
                                                 ),
                                                 GestureDetector(
                                                   onTap: () {
+                                                    print(
+                                                        "lihat semua clicked");
                                                     showSheet(context);
                                                   },
                                                   child: Text(
@@ -500,6 +506,8 @@ class _DetailSubjectScreenState extends State<DetailSubjectScreen> {
                                                 ),
                                                 GestureDetector(
                                                   onTap: () {
+                                                    print(
+                                                        "lihat semua clicked");
                                                     showSheet(context);
                                                   },
                                                   child: Text(
@@ -604,236 +612,233 @@ class _DetailSubjectScreenState extends State<DetailSubjectScreen> {
 
 void showSheet(BuildContext context) {
   showBottomSheet(
-      context: context,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
-      ),
-      builder: (context) {
-        return Container(
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text("Dimensi Tiga"),
-                    GestureDetector(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: Icon(Icons.close))
-                  ],
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  children: [
-                    Container(
-                        margin: EdgeInsets.only(
-                            right: Dimension.safeBlockVertical * 2),
-                        child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
-                            child: Container(
-                              padding: EdgeInsets.all(
-                                  Dimension.safeBlockVertical * 2),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    FontAwesomeIcons.box,
-                                    size: Dimension.safeBlockVertical * 10,
-                                    color: Colors.black,
-                                  ),
-                                  SizedBox(
-                                    height: Dimension.safeBlockVertical * 2,
-                                  ),
-                                  Text(
-                                    "Rumus 3 Dimensi",
-                                    style: TextStyle(
-                                        fontSize:
-                                            Dimension.safeBlockVertical * 2,
-                                        fontWeight: FontWeight.w500),
-                                  )
-                                ],
-                              ),
-                            ))),
-                    Container(
-                        margin: EdgeInsets.only(
-                            right: Dimension.safeBlockVertical * 2),
-                        child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
-                            child: Container(
-                              padding: EdgeInsets.all(
-                                  Dimension.safeBlockVertical * 2),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    FontAwesomeIcons.box,
-                                    size: Dimension.safeBlockVertical * 10,
-                                    color: Colors.black,
-                                  ),
-                                  SizedBox(
-                                    height: Dimension.safeBlockVertical * 2,
-                                  ),
-                                  Text(
-                                    "Rumus 3 Dimensi",
-                                    style: TextStyle(
-                                        fontSize:
-                                            Dimension.safeBlockVertical * 2,
-                                        fontWeight: FontWeight.w500),
-                                  )
-                                ],
-                              ),
-                            ))),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Container(
-                        margin: EdgeInsets.only(
-                            right: Dimension.safeBlockVertical * 2),
-                        child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
-                            child: Container(
-                              padding: EdgeInsets.all(
-                                  Dimension.safeBlockVertical * 2),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    FontAwesomeIcons.box,
-                                    size: Dimension.safeBlockVertical * 10,
-                                    color: Colors.black,
-                                  ),
-                                  SizedBox(
-                                    height: Dimension.safeBlockVertical * 2,
-                                  ),
-                                  Text(
-                                    "Rumus 3 Dimensi",
-                                    style: TextStyle(
-                                        fontSize:
-                                            Dimension.safeBlockVertical * 2,
-                                        fontWeight: FontWeight.w500),
-                                  )
-                                ],
-                              ),
-                            ))),
-                    Container(
-                        margin: EdgeInsets.only(
-                            right: Dimension.safeBlockVertical * 2),
-                        child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
-                            child: Container(
-                              padding: EdgeInsets.all(
-                                  Dimension.safeBlockVertical * 2),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    FontAwesomeIcons.box,
-                                    size: Dimension.safeBlockVertical * 10,
-                                    color: Colors.black,
-                                  ),
-                                  SizedBox(
-                                    height: Dimension.safeBlockVertical * 2,
-                                  ),
-                                  Text(
-                                    "Rumus 3 Dimensi",
-                                    style: TextStyle(
-                                        fontSize:
-                                            Dimension.safeBlockVertical * 2,
-                                        fontWeight: FontWeight.w500),
-                                  )
-                                ],
-                              ),
-                            ))),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Container(
-                        margin: EdgeInsets.only(
-                            right: Dimension.safeBlockVertical * 2),
-                        child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
-                            child: Container(
-                              padding: EdgeInsets.all(
-                                  Dimension.safeBlockVertical * 2),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    FontAwesomeIcons.box,
-                                    size: Dimension.safeBlockVertical * 10,
-                                    color: Colors.black,
-                                  ),
-                                  SizedBox(
-                                    height: Dimension.safeBlockVertical * 2,
-                                  ),
-                                  Text(
-                                    "Rumus 3 Dimensi",
-                                    style: TextStyle(
-                                        fontSize:
-                                            Dimension.safeBlockVertical * 2,
-                                        fontWeight: FontWeight.w500),
-                                  )
-                                ],
-                              ),
-                            ))),
-                    Container(
-                        margin: EdgeInsets.only(
-                            right: Dimension.safeBlockVertical * 2),
-                        child: Card(
-                            shape: RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(10))),
-                            child: Container(
-                              padding: EdgeInsets.all(
-                                  Dimension.safeBlockVertical * 2),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    FontAwesomeIcons.box,
-                                    size: Dimension.safeBlockVertical * 10,
-                                    color: Colors.black,
-                                  ),
-                                  SizedBox(
-                                    height: Dimension.safeBlockVertical * 2,
-                                  ),
-                                  Text(
-                                    "Rumus 3 Dimensi",
-                                    style: TextStyle(
-                                        fontSize:
-                                            Dimension.safeBlockVertical * 2,
-                                        fontWeight: FontWeight.w500),
-                                  )
-                                ],
-                              ),
-                            ))),
-                  ],
-                ),
-              ],
-            ),
+    context: context,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(15.0)),
+    ),
+    builder: (context) {
+      return Container(
+        height: MediaQuery.of(context).size.height * 0.8,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Dimensi Tiga"),
+                  GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Icon(Icons.close))
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  Container(
+                      margin: EdgeInsets.only(
+                          right: Dimension.safeBlockVertical * 2),
+                      child: Card(
+                          shape: RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10))),
+                          child: Container(
+                            padding:
+                                EdgeInsets.all(Dimension.safeBlockVertical * 2),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  FontAwesomeIcons.box,
+                                  size: Dimension.safeBlockVertical * 10,
+                                  color: Colors.black,
+                                ),
+                                SizedBox(
+                                  height: Dimension.safeBlockVertical * 2,
+                                ),
+                                Text(
+                                  "Rumus 3 Dimensi",
+                                  style: TextStyle(
+                                      fontSize: Dimension.safeBlockVertical * 2,
+                                      fontWeight: FontWeight.w500),
+                                )
+                              ],
+                            ),
+                          ))),
+                  Container(
+                      margin: EdgeInsets.only(
+                          right: Dimension.safeBlockVertical * 2),
+                      child: Card(
+                          shape: RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10))),
+                          child: Container(
+                            padding:
+                                EdgeInsets.all(Dimension.safeBlockVertical * 2),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  FontAwesomeIcons.box,
+                                  size: Dimension.safeBlockVertical * 10,
+                                  color: Colors.black,
+                                ),
+                                SizedBox(
+                                  height: Dimension.safeBlockVertical * 2,
+                                ),
+                                Text(
+                                  "Rumus 3 Dimensi",
+                                  style: TextStyle(
+                                      fontSize: Dimension.safeBlockVertical * 2,
+                                      fontWeight: FontWeight.w500),
+                                )
+                              ],
+                            ),
+                          ))),
+                ],
+              ),
+              Row(
+                children: [
+                  Container(
+                      margin: EdgeInsets.only(
+                          right: Dimension.safeBlockVertical * 2),
+                      child: Card(
+                          shape: RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10))),
+                          child: Container(
+                            padding:
+                                EdgeInsets.all(Dimension.safeBlockVertical * 2),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  FontAwesomeIcons.box,
+                                  size: Dimension.safeBlockVertical * 10,
+                                  color: Colors.black,
+                                ),
+                                SizedBox(
+                                  height: Dimension.safeBlockVertical * 2,
+                                ),
+                                Text(
+                                  "Rumus 3 Dimensi",
+                                  style: TextStyle(
+                                      fontSize: Dimension.safeBlockVertical * 2,
+                                      fontWeight: FontWeight.w500),
+                                )
+                              ],
+                            ),
+                          ))),
+                  Container(
+                      margin: EdgeInsets.only(
+                          right: Dimension.safeBlockVertical * 2),
+                      child: Card(
+                          shape: RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10))),
+                          child: Container(
+                            padding:
+                                EdgeInsets.all(Dimension.safeBlockVertical * 2),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  FontAwesomeIcons.box,
+                                  size: Dimension.safeBlockVertical * 10,
+                                  color: Colors.black,
+                                ),
+                                SizedBox(
+                                  height: Dimension.safeBlockVertical * 2,
+                                ),
+                                Text(
+                                  "Rumus 3 Dimensi",
+                                  style: TextStyle(
+                                      fontSize: Dimension.safeBlockVertical * 2,
+                                      fontWeight: FontWeight.w500),
+                                )
+                              ],
+                            ),
+                          ))),
+                ],
+              ),
+              Row(
+                children: [
+                  Container(
+                      margin: EdgeInsets.only(
+                          right: Dimension.safeBlockVertical * 2),
+                      child: Card(
+                          shape: RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10))),
+                          child: Container(
+                            padding:
+                                EdgeInsets.all(Dimension.safeBlockVertical * 2),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  FontAwesomeIcons.box,
+                                  size: Dimension.safeBlockVertical * 10,
+                                  color: Colors.black,
+                                ),
+                                SizedBox(
+                                  height: Dimension.safeBlockVertical * 2,
+                                ),
+                                Text(
+                                  "Rumus 3 Dimensi",
+                                  style: TextStyle(
+                                      fontSize: Dimension.safeBlockVertical * 2,
+                                      fontWeight: FontWeight.w500),
+                                )
+                              ],
+                            ),
+                          ))),
+                  Container(
+                    margin:
+                        EdgeInsets.only(right: Dimension.safeBlockVertical * 2),
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(10))),
+                      child: Container(
+                        padding:
+                            EdgeInsets.all(Dimension.safeBlockVertical * 2),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              FontAwesomeIcons.box,
+                              size: Dimension.safeBlockVertical * 10,
+                              color: Colors.black,
+                            ),
+                            SizedBox(
+                              height: Dimension.safeBlockVertical * 2,
+                            ),
+                            Text(
+                              "Rumus 3 Dimensi",
+                              style: TextStyle(
+                                  fontSize: Dimension.safeBlockVertical * 2,
+                                  fontWeight: FontWeight.w500),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
-        );
-      });
+        ),
+      );
+    },
+  );
 }
